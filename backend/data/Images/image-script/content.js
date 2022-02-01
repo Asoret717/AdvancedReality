@@ -14,7 +14,7 @@ function beforeRender(request, response, done) {
         con.query('select * from images', function(err, result, fields) {
             if (err) throw err;
             request.data = {
-                images: result
+                image: result
             };
             done();
         });

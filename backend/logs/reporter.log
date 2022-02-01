@@ -4455,3 +4455,131 @@ From previous event:
 2022-01-24T11:48:53.372Z - info: Starting rendering request 13 (user: null)
 2022-01-24T11:48:53.374Z - info: Rendering template { name: ReportImage.pdf, recipe: chrome-pdf, engine: handlebars, preview: false }
 2022-01-24T11:48:54.288Z - info: Rendering request 13 finished in 916 ms
+2022-01-28T16:54:29.758Z - info: Initializing jsreport@2.11.0 in development mode using configuration file: jsreport.config.json
+2022-01-28T16:54:29.760Z - info: Searching for available extensions in D:\Unity files\projects\backend\
+2022-01-28T16:54:30.081Z - info: Extensions location cache contains up to date information, skipping crawling in D:\Unity files\projects\backend\
+2022-01-28T16:54:30.216Z - info: Found 35 extensions
+2022-01-28T16:54:34.156Z - info: Setting http-server strategy for rendering
+2022-01-28T16:54:34.380Z - info: Using extension cli@local:D:\Unity files\projects\backend\node_modules\jsreport-cli:2.2.5
+2022-01-28T16:54:34.496Z - info: Using extension debug@local:D:\Unity files\projects\backend\node_modules\jsreport-debug:2.1.3
+2022-01-28T16:54:34.527Z - info: Using extension express@local:D:\Unity files\projects\backend\node_modules\jsreport-express:2.8.1
+2022-01-28T16:54:35.669Z - info: Using extension freeze@local:D:\Unity files\projects\backend\node_modules\jsreport-freeze:2.0.0
+2022-01-28T16:54:35.684Z - info: Using extension handlebars@local:D:\Unity files\projects\backend\node_modules\jsreport-handlebars:2.1.0
+2022-01-28T16:54:35.737Z - info: Using extension import-export@local:D:\Unity files\projects\backend\node_modules\jsreport-import-export:2.1.1
+2022-01-28T16:54:37.676Z - info: Using extension jsrender@local:D:\Unity files\projects\backend\node_modules\jsreport-jsrender:2.1.1
+2022-01-28T16:54:37.679Z - info: Using extension tags@local:D:\Unity files\projects\backend\node_modules\jsreport-tags:2.5.0
+2022-01-28T16:54:37.704Z - info: Using extension templates@local:D:\Unity files\projects\backend\node_modules\jsreport-templates:2.4.0
+2022-01-28T16:54:37.714Z - info: Using extension authorization@local:D:\Unity files\projects\backend\node_modules\jsreport-authorization:2.4.0
+2022-01-28T16:54:37.812Z - info: Using extension base@local:D:\Unity files\projects\backend\node_modules\jsreport-base:2.0.2
+2022-01-28T16:54:37.840Z - info: Using extension browser-client@local:D:\Unity files\projects\backend\node_modules\jsreport-browser-client:2.2.2
+2022-01-28T16:54:37.859Z - info: Using extension child-templates@local:D:\Unity files\projects\backend\node_modules\jsreport-child-templates:1.4.0
+2022-01-28T16:54:37.916Z - info: Using extension chrome-pdf@local:D:\Unity files\projects\backend\node_modules\jsreport-chrome-pdf:1.10.0
+2022-01-28T16:54:39.657Z - info: Using extension data@local:D:\Unity files\projects\backend\node_modules\jsreport-data:2.4.0
+2022-01-28T16:54:39.677Z - info: Using extension docx@local:D:\Unity files\projects\backend\node_modules\jsreport-docx:2.9.0
+2022-01-28T16:54:39.723Z - info: Using extension fs-store@local:D:\Unity files\projects\backend\node_modules\jsreport-fs-store:2.9.1
+2022-01-28T16:54:42.376Z - info: Using extension licensing@local:D:\Unity files\projects\backend\node_modules\jsreport-licensing:2.2.3
+2022-01-28T16:54:42.393Z - info: Using extension pdf-utils@local:D:\Unity files\projects\backend\node_modules\jsreport-pdf-utils:1.10.1
+2022-01-28T16:54:43.247Z - info: Using extension pptx@local:D:\Unity files\projects\backend\node_modules\jsreport-pptx:0.7.0
+2022-01-28T16:54:43.274Z - info: Using extension reports@local:D:\Unity files\projects\backend\node_modules\jsreport-reports:2.5.1
+2022-01-28T16:54:43.310Z - info: Using extension static-pdf@local:D:\Unity files\projects\backend\node_modules\jsreport-static-pdf:0.4.0
+2022-01-28T16:54:43.371Z - info: Using extension studio@local:D:\Unity files\projects\backend\node_modules\jsreport-studio:2.10.1
+2022-01-28T16:54:43.916Z - info: Using extension text@local:D:\Unity files\projects\backend\node_modules\jsreport-text:2.0.0
+2022-01-28T16:54:43.942Z - info: Using extension version-control@local:D:\Unity files\projects\backend\node_modules\jsreport-version-control:1.6.0
+2022-01-28T16:54:45.063Z - info: Using extension assets@local:D:\Unity files\projects\backend\node_modules\jsreport-assets:1.7.0
+2022-01-28T16:54:45.200Z - info: Using extension html-to-xlsx@local:D:\Unity files\projects\backend\node_modules\jsreport-html-to-xlsx:2.8.3
+2022-01-28T16:54:54.934Z - info: html-to-xlsx detected chrome as available html engine
+2022-01-28T16:54:54.935Z - info: Using extension scheduling@local:D:\Unity files\projects\backend\node_modules\jsreport-scheduling:2.5.0
+2022-01-28T16:54:55.490Z - info: Using extension scripts@local:D:\Unity files\projects\backend\node_modules\jsreport-scripts:2.6.0
+2022-01-28T16:54:55.512Z - info: Using extension studio-theme-dark@local:D:\Unity files\projects\backend\node_modules\jsreport-studio-theme-dark:0.3.0
+2022-01-28T16:54:55.530Z - info: Using extension xlsx@local:D:\Unity files\projects\backend\node_modules\jsreport-xlsx:2.5.0
+2022-01-28T16:54:59.340Z - info: Using extension public-templates@local:D:\Unity files\projects\backend\node_modules\jsreport-public-templates:2.2.0
+2022-01-28T16:54:59.362Z - info: Using extension resources@local:D:\Unity files\projects\backend\node_modules\jsreport-resources:2.1.0
+2022-01-28T16:54:59.378Z - info: Using extension sample-template@local:D:\Unity files\projects\backend\node_modules\jsreport-sample-template:2.6.1
+2022-01-28T16:54:59.400Z - info: Using general timeout for rendering (reportTimeout: 60000)
+2022-01-28T16:54:59.400Z - info: Using fs provider for template store.
+2022-01-28T16:54:59.405Z - info: fs store is persisting using fs
+2022-01-28T16:54:59.406Z - info: fs store is synchronizing using fs
+2022-01-28T16:54:59.417Z - info: fs store is loading data
+2022-01-28T16:54:59.626Z - info: fs store is initialized successfully
+2022-01-28T16:54:59.642Z - info: Creating default express app.
+2022-01-28T16:55:00.761Z - info: jsreport server successfully started on http port: 5488
+2022-01-28T16:55:00.763Z - info: fs store emits sockets to synchronize underlying changes with studio
+2022-01-28T16:55:01.312Z - info: Verifying license key free
+2022-01-28T16:55:01.314Z - info: Using free license
+2022-01-28T16:55:01.320Z - info: reporter initialized
+2022-01-28T16:55:36.759Z - info: Starting rendering request 1 (user: null)
+2022-01-28T16:55:36.761Z - info: Rendering template { name: ReportImage.pdf, recipe: chrome-pdf, engine: handlebars, preview: false }
+2022-01-28T16:55:48.090Z - info: Rendering request 1 finished in 11331 ms
+2022-01-28T16:56:08.433Z - info: Starting rendering request 2 (user: null)
+2022-01-28T16:56:08.435Z - info: Rendering template { name: ReportImage.pdf, recipe: chrome-pdf, engine: handlebars, preview: true }
+2022-01-28T16:56:09.429Z - info: Rendering request 2 finished in 995 ms
+2022-01-28T17:09:24.802Z - info: Starting rendering request 3 (user: null)
+2022-01-28T17:09:24.804Z - info: Rendering template { name: ReportImage.pdf, recipe: chrome-pdf, engine: handlebars, preview: true }
+2022-01-28T17:09:28.097Z - info: Rendering request 3 finished in 3296 ms
+2022-01-28T17:09:44.950Z - info: Starting rendering request 4 (user: null)
+2022-01-28T17:09:44.953Z - info: Rendering template { name: ReportImage.pdf, recipe: chrome-pdf, engine: handlebars, preview: true }
+2022-01-28T17:09:45.926Z - info: Rendering request 4 finished in 976 ms
+2022-01-28T17:30:03.456Z - info: Starting rendering request 5 (user: null)
+2022-01-28T17:30:03.458Z - info: Rendering template { name: ReportImage.pdf, recipe: chrome-pdf, engine: handlebars, preview: true }
+2022-01-28T17:30:06.737Z - info: Rendering request 5 finished in 3282 ms
+2022-01-28T17:30:06.822Z - info: Starting rendering request 6 (user: null)
+2022-01-28T17:30:06.825Z - info: Rendering template { name: ReportImage.pdf, recipe: chrome-pdf, engine: handlebars, preview: true }
+2022-01-28T17:30:07.811Z - info: Rendering request 6 finished in 990 ms
+2022-01-31T18:56:48.228Z - info: Initializing jsreport@2.11.0 in development mode using configuration file: jsreport.config.json
+2022-01-31T18:56:48.230Z - info: Searching for available extensions in D:\Unity files\projects\backend\
+2022-01-31T18:56:48.858Z - info: Extensions location cache contains up to date information, skipping crawling in D:\Unity files\projects\backend\
+2022-01-31T18:56:49.018Z - info: Found 35 extensions
+2022-01-31T18:56:54.376Z - info: Setting http-server strategy for rendering
+2022-01-31T18:56:54.704Z - info: Using extension cli@local:D:\Unity files\projects\backend\node_modules\jsreport-cli:2.2.5
+2022-01-31T18:56:54.880Z - info: Using extension debug@local:D:\Unity files\projects\backend\node_modules\jsreport-debug:2.1.3
+2022-01-31T18:56:54.911Z - info: Using extension express@local:D:\Unity files\projects\backend\node_modules\jsreport-express:2.8.1
+2022-01-31T18:56:56.019Z - info: Using extension freeze@local:D:\Unity files\projects\backend\node_modules\jsreport-freeze:2.0.0
+2022-01-31T18:56:56.034Z - info: Using extension handlebars@local:D:\Unity files\projects\backend\node_modules\jsreport-handlebars:2.1.0
+2022-01-31T18:56:56.121Z - info: Using extension import-export@local:D:\Unity files\projects\backend\node_modules\jsreport-import-export:2.1.1
+2022-01-31T18:56:57.918Z - info: Using extension jsrender@local:D:\Unity files\projects\backend\node_modules\jsreport-jsrender:2.1.1
+2022-01-31T18:56:57.920Z - info: Using extension tags@local:D:\Unity files\projects\backend\node_modules\jsreport-tags:2.5.0
+2022-01-31T18:56:57.947Z - info: Using extension templates@local:D:\Unity files\projects\backend\node_modules\jsreport-templates:2.4.0
+2022-01-31T18:56:57.989Z - info: Using extension authorization@local:D:\Unity files\projects\backend\node_modules\jsreport-authorization:2.4.0
+2022-01-31T18:56:58.088Z - info: Using extension base@local:D:\Unity files\projects\backend\node_modules\jsreport-base:2.0.2
+2022-01-31T18:56:58.115Z - info: Using extension browser-client@local:D:\Unity files\projects\backend\node_modules\jsreport-browser-client:2.2.2
+2022-01-31T18:56:58.151Z - info: Using extension child-templates@local:D:\Unity files\projects\backend\node_modules\jsreport-child-templates:1.4.0
+2022-01-31T18:56:58.207Z - info: Using extension chrome-pdf@local:D:\Unity files\projects\backend\node_modules\jsreport-chrome-pdf:1.10.0
+2022-01-31T18:56:59.990Z - info: Using extension data@local:D:\Unity files\projects\backend\node_modules\jsreport-data:2.4.0
+2022-01-31T18:57:00.011Z - info: Using extension docx@local:D:\Unity files\projects\backend\node_modules\jsreport-docx:2.9.0
+2022-01-31T18:57:00.048Z - info: Using extension fs-store@local:D:\Unity files\projects\backend\node_modules\jsreport-fs-store:2.9.1
+2022-01-31T18:57:02.766Z - info: Using extension licensing@local:D:\Unity files\projects\backend\node_modules\jsreport-licensing:2.2.3
+2022-01-31T18:57:02.784Z - info: Using extension pdf-utils@local:D:\Unity files\projects\backend\node_modules\jsreport-pdf-utils:1.10.1
+2022-01-31T18:57:03.956Z - info: Using extension pptx@local:D:\Unity files\projects\backend\node_modules\jsreport-pptx:0.7.0
+2022-01-31T18:57:03.999Z - info: Using extension reports@local:D:\Unity files\projects\backend\node_modules\jsreport-reports:2.5.1
+2022-01-31T18:57:04.035Z - info: Using extension static-pdf@local:D:\Unity files\projects\backend\node_modules\jsreport-static-pdf:0.4.0
+2022-01-31T18:57:04.138Z - info: Using extension studio@local:D:\Unity files\projects\backend\node_modules\jsreport-studio:2.10.1
+2022-01-31T18:57:04.708Z - info: Using extension text@local:D:\Unity files\projects\backend\node_modules\jsreport-text:2.0.0
+2022-01-31T18:57:04.733Z - info: Using extension version-control@local:D:\Unity files\projects\backend\node_modules\jsreport-version-control:1.6.0
+2022-01-31T18:57:05.880Z - info: Using extension assets@local:D:\Unity files\projects\backend\node_modules\jsreport-assets:1.7.0
+2022-01-31T18:57:06.066Z - info: Using extension html-to-xlsx@local:D:\Unity files\projects\backend\node_modules\jsreport-html-to-xlsx:2.8.3
+2022-01-31T18:57:14.559Z - info: html-to-xlsx detected chrome as available html engine
+2022-01-31T18:57:14.560Z - info: Using extension scheduling@local:D:\Unity files\projects\backend\node_modules\jsreport-scheduling:2.5.0
+2022-01-31T18:57:15.223Z - info: Using extension scripts@local:D:\Unity files\projects\backend\node_modules\jsreport-scripts:2.6.0
+2022-01-31T18:57:15.244Z - info: Using extension studio-theme-dark@local:D:\Unity files\projects\backend\node_modules\jsreport-studio-theme-dark:0.3.0
+2022-01-31T18:57:15.264Z - info: Using extension xlsx@local:D:\Unity files\projects\backend\node_modules\jsreport-xlsx:2.5.0
+2022-01-31T18:57:18.740Z - info: Using extension public-templates@local:D:\Unity files\projects\backend\node_modules\jsreport-public-templates:2.2.0
+2022-01-31T18:57:18.762Z - info: Using extension resources@local:D:\Unity files\projects\backend\node_modules\jsreport-resources:2.1.0
+2022-01-31T18:57:18.778Z - info: Using extension sample-template@local:D:\Unity files\projects\backend\node_modules\jsreport-sample-template:2.6.1
+2022-01-31T18:57:18.800Z - info: Using general timeout for rendering (reportTimeout: 60000)
+2022-01-31T18:57:18.800Z - info: Using fs provider for template store.
+2022-01-31T18:57:18.804Z - info: fs store is persisting using fs
+2022-01-31T18:57:18.805Z - info: fs store is synchronizing using fs
+2022-01-31T18:57:18.815Z - info: fs store is loading data
+2022-01-31T18:57:19.050Z - info: fs store is initialized successfully
+2022-01-31T18:57:19.063Z - info: Creating default express app.
+2022-01-31T18:57:20.403Z - info: jsreport server successfully started on http port: 5488
+2022-01-31T18:57:20.405Z - info: fs store emits sockets to synchronize underlying changes with studio
+2022-01-31T18:57:21.162Z - info: Verifying license key free
+2022-01-31T18:57:21.163Z - info: Using free license
+2022-01-31T18:57:21.167Z - info: reporter initialized
+2022-01-31T19:08:46.982Z - info: Starting rendering request 1 (user: null)
+2022-01-31T19:08:46.986Z - info: Rendering template { name: ReportImage.pdf, recipe: chrome-pdf, engine: handlebars, preview: false }
+2022-01-31T19:09:01.380Z - info: Rendering request 1 finished in 14398 ms
+2022-02-01T16:02:07.636Z - info: Initializing jsreport@2.11.0 in development mode using configuration file: jsreport.config.json
+2022-02-01T16:02:07.638Z - info: Searching for available extensions in D:\Unity files\projects\backend\
+2022-02-01T16:02:08.002Z - info: Extensions location cache contains up to date information, skipping crawling in D:\Unity files\projects\backend\
