@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class TourManager : MonoBehaviour
 {
+    public Animator transition;
     //List of sites
     public GameObject[] objSites;
     //main menu
@@ -33,6 +34,7 @@ public class TourManager : MonoBehaviour
         }*/
         if (firstload)
         {
+            transition.SetTrigger("Middle");
             if (Input.GetKeyDown(KeyCode.Tab))
             {
                 ReturnToMenu();
@@ -43,7 +45,7 @@ public class TourManager : MonoBehaviour
             {
                 RaycastHit hit;
                 Ray ray = Camera.transform.GetComponent<Camera>().ScreenPointToRay(Input.mousePosition);
-                if(Physics.Raycast(ray, out hit, 100.0f)){
+                if(Physics.Raycast(ray, out hit, 600.0f)){
                     if(hit.transform.gameObject.tag == "Image"){
                         hit.transform.gameObject.GetComponent<MediaImage>().ShowImage();
                     }else if(hit.transform.gameObject.tag == "Timanfaya"){
@@ -59,13 +61,27 @@ public class TourManager : MonoBehaviour
             }
             }
         }else{
-            LoadSite(0);
+            objSites[0].SetActive(true);
+            //hide menu
+        canvasMainMenu.SetActive(false);
+        //enable the camera
+        isCameraMove = true;
+        firstload = true;
+        open = true;
+        GetComponent<CameraController>().ResetCamera();
+            //LoadSite(0);
             ReturnToMenu();
         }
     }
 
     public void LoadSite(int siteNumber)
     {
+        StartCoroutine(animationScene(siteNumber));
+    }
+
+    IEnumerator animationScene(int siteNumber){
+        transition.SetTrigger("Start");
+        yield return new WaitForSeconds(1f);
         //show site
         for (int i = 0; i < objSites.Length; i++)
         {
@@ -88,8 +104,9 @@ public class TourManager : MonoBehaviour
         firstload = true;
         open = true;
         GetComponent<CameraController>().ResetCamera();
+        transition.SetTrigger("End");
+        yield return new WaitForSeconds(1f);
     }
-
     public void ReturnToMenu()
     {
         //reset

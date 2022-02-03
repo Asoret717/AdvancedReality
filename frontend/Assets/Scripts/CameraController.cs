@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
-    public GameObject Camera;
+    public GameObject Camera, Camera2;
     //sensitivity of the mouse
     private float rotateSpeed = 150.0f;
 
-    private float zoomSpeed = 300.0f;
+    private float zoomSpeed = 500.0f;
     private float zoomAmount = 0.0f;
     private TourManager tourManager;
 
@@ -30,14 +30,17 @@ public class CameraController : MonoBehaviour
                 + Input.GetAxis("Mouse X") * Time.deltaTime * rotateSpeed, 0);
             }
 
-            if (Input.GetMouseButton(1))
+            if (Input.GetAxis("Mouse ScrollWheel")!=0f)
             {
-                zoomAmount = Mathf.Clamp(zoomAmount + Input.GetAxis("Mouse Y") * Time.deltaTime
+                zoomAmount = Mathf.Clamp(zoomAmount + Input.GetAxis("Mouse ScrollWheel") * Time.deltaTime
                 * zoomSpeed, -5.0f, 5.0f);
+                /*if(zoomAmount < 0.0f){
+                    zoomAmount=0.0f;
+                }*/
                 Camera.transform.GetComponent<Camera>().transform.localPosition = new Vector3(0, 0, zoomAmount);
             }
 
-            if(Input.GetMouseButton(2)){
+            if(Input.GetMouseButton(1)){
                 ResetZoom();
             }
         }

@@ -2082,7 +2082,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1658377168}
-        m_TargetAssemblyTypeName: ChangeScene, Assembly-CSharp
+        m_TargetAssemblyTypeName: ChangeSceneNormal, Assembly-CSharp
         m_MethodName: changeScene
         m_Mode: 5
         m_Arguments:
@@ -3170,7 +3170,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1658377168}
-        m_TargetAssemblyTypeName: ChangeScene, Assembly-CSharp
+        m_TargetAssemblyTypeName: ChangeSceneNormal, Assembly-CSharp
         m_MethodName: changeScene
         m_Mode: 5
         m_Arguments:
@@ -6914,7 +6914,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1658377167}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b121d746244e74b9516d9056c28184, type: 3}
+  m_Script: {fileID: 11500000, guid: 094a4506704199f43ac3904907608109, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!224 &1658377169
@@ -7843,7 +7843,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1658377168}
-        m_TargetAssemblyTypeName: ChangeScene, Assembly-CSharp
+        m_TargetAssemblyTypeName: ChangeSceneNormal, Assembly-CSharp
         m_MethodName: changeScene
         m_Mode: 5
         m_Arguments:
@@ -9105,7 +9105,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1658377168}
-        m_TargetAssemblyTypeName: ChangeScene, Assembly-CSharp
+        m_TargetAssemblyTypeName: ChangeSceneNormal, Assembly-CSharp
         m_MethodName: changeScene
         m_Mode: 5
         m_Arguments:
