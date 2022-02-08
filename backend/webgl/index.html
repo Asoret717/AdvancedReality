@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Unity WebGL Player | Advanced Reality</title>
+  </head>
+  <body style="text-align: center">
+    <canvas id="unity-canvas" width=1268 height=719 style="width: 1268px; height: 719px; background: #231F20"></canvas>
+    <script src="Build/Advanced Reality Iframe.loader.js"></script>
+    <script>
+      createUnityInstance(document.querySelector("#unity-canvas"), {
+        dataUrl: "Build/Advanced Reality Iframe.data",
+        frameworkUrl: "Build/Advanced Reality Iframe.framework.js",
+        codeUrl: "Build/Advanced Reality Iframe.wasm",
+        streamingAssetsUrl: "StreamingAssets",
+        companyName: "Advanced Reality",
+        productName: "Advanced Reality",
+        productVersion: "4.0",
+        // matchWebGLToCanvasSize: false, // Uncomment this to separately control WebGL canvas render size and DOM element size.
+        // devicePixelRatio: 1, // Uncomment this to override low DPI rendering on high DPI displays.
+      });
+    </script>
+  </body>
+</html>

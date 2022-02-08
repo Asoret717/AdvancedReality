@@ -68,7 +68,7 @@ public class LoginUsers2 : MonoBehaviour
         isLoggedin();
         settingDarkness();
         ip = LoginUsers.getIp();
-        ws = WebSocketFactory.CreateInstance("ws://" + ip + ":8080");
+        ws = WebSocketFactory.CreateInstance("ws://" + ip + ":8000");
         ws.OnMessage += (byte[] msg) =>
         {
             recibido = System.Text.Encoding.UTF8.GetString(msg);

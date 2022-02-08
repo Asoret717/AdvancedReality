@@ -9,6 +9,36 @@ const app = express();
 const port = process.env.PORT || 4000;
 
 ///////////////////////////////////////
+
+/*let http = require('http');
+let fs = require('fs');
+
+let handleRequest = (request, response) => {
+    response.writeHead(200, {
+        'Content-Type': 'text/html'
+    });
+    fs.readFile('webgl', null, function (error, data) {
+        if (error) {
+            response.writeHead(404);
+            respone.write('Whoops! File not found!');
+        } else {
+            response.write(data);
+        }
+        response.end();
+    });
+};
+
+http.createServer(handleRequest).listen(8000); */
+
+const { exec } = require('child_process');
+exec('http-server webgl', (err, stdout, stderr) => {
+  if (err) {
+    // node couldn't execute the command
+    return
+  }
+});
+
+///////////////////////////////////////
 const jsreport = require('jsreport')()
 
 if (process.env.JSREPORT_CLI) {
@@ -26,7 +56,7 @@ if (process.env.JSREPORT_CLI) {
 
 ///////////////////////////////////////
 const WebSocket = require('ws')
-const wss = new WebSocket.Server({port: 8080},()=>{
+const wss = new WebSocket.Server({port: 8000},()=>{
     console.log('server started')
 })
 
@@ -44,7 +74,7 @@ wss.broadcast = function broadcast(msg){
   };
 
 wss.on('listening',()=>{
-    console.log('server is listening on port 8080')
+    console.log('server is listening on port 8000')
 }) 
 
 ///////////////////////////////////////
