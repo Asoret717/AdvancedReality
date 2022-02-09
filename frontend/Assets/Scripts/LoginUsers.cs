@@ -303,7 +303,6 @@ public class LoginUsers : MonoBehaviour
             {
                 login_error.SetActive(false);
                 contentUser = JsonConvert.DeserializeObject<OverUserModel>(DbData);
-                //Debug.Log(contentUser.access_token);
                 contentUser.user.password = form_login.transform.GetChild(2).GetComponent<InputField>().text;
                 form_login.transform.GetChild(1).GetComponent<InputField>().text = "";
                 form_login.transform.GetChild(2).GetComponent<InputField>().text = "";
