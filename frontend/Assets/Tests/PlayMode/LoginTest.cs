@@ -12,14 +12,13 @@ using System.Net.Http.Headers;
 using UnityEngine.Networking;
 using UnityEngine.UI;
 using Newtonsoft.Json;
-public class LoginTestScript
+public class LoginTest
 {
+    public string result = "";
     public int testCounter = 0;
     public bool CreatedAccount = false;
-
-    public bool loggedIn = false;
     public LoginUsers.OverUserModel contentUser = null;
-
+    
     [UnitySetUp]
     public IEnumerator CreateTestUser()
     {
@@ -52,44 +51,20 @@ public class LoginTestScript
     }
     
     [UnityTest]
-    public IEnumerator LoginRight()
-    {
+    public IEnumerator LoginRight(){
         var loggedIn = false;
-        var byteArray = System.Text.Encoding.UTF8.GetBytes("test:1234");
-        string encodedText = Convert.ToBase64String(byteArray);
-        //using var client = new HttpClient();
-        UnityWebRequest request = new UnityWebRequest("http://localhost:4000/api/users/signin", "POST");
-        request.downloadHandler = new DownloadHandlerBuffer();
-        request.SetRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-        request.SetRequestHeader("Authorization", "Basic " + encodedText);
-        yield return request.SendWebRequest();
-
-        if (request.downloadHandler.text.StartsWith("{\"user\":{\"id\""))
-        {
-            loggedIn = true;
-        }
+        yield return LoginUsers.loginI("test","1234");
+        if (LoginUsers.DbData.StartsWith("{\"user\":{\"id\"")){ loggedIn = true; }
         testCounter += 1;
         Debug.Log("Test con los valores correctos");
         Assert.IsTrue(loggedIn, "El usuario no pudo logearse con los credenciales correctos");
     }
 
     [UnityTest]
-    public IEnumerator LoginFail()
-    {
+    public IEnumerator LoginFail(){
         var loggedIn = false;
-        var byteArray = System.Text.Encoding.UTF8.GetBytes("test:123");
-        string encodedText = Convert.ToBase64String(byteArray);
-        UnityWebRequest request = new UnityWebRequest("http://localhost:4000/api/users/signin", "POST");
-        request.downloadHandler = new DownloadHandlerBuffer();
-        request.SetRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-        request.SetRequestHeader("Authorization", "Basic " + encodedText);
-        yield return request.SendWebRequest();
-
-        if (request.downloadHandler.text.StartsWith("{\"user\":{\"id\""))
-        {
-            Debug.Log("The test user logged in correctly" + request.downloadHandler.text);
-            loggedIn = true;
-        }
+        yield return LoginUsers.loginI("test","123");
+        if (LoginUsers.DbData.StartsWith("{\"user\":{\"id\"")){ loggedIn = true; }
         testCounter += 1;
         Debug.Log("Test con la contraseña equivocada");
         Assert.IsFalse(loggedIn, "El usuario pudo conectarse con la contraseña incorrecta");
