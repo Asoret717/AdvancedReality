@@ -1,13 +1,5 @@
 fileFormatVersion: 2
-<<<<<<< HEAD
 guid: c287846d875726746ac7011b554f467f
-=======
-<<<<<<< HEAD:frontend/Assets/Plugins/JSUtils.jslib.meta
-guid: e5500de534c036b4ea220cfb4427cf26
-=======
-guid: c287846d875726746ac7011b554f467f
->>>>>>> 443183f307e24a099bf2c14d3d3f283ac72ae89b:frontend/Assets/Plugins/WebSocket.jslib.meta
->>>>>>> 443183f307e24a099bf2c14d3d3f283ac72ae89b
 PluginImporter:
   externalObjects: {}
   serializedVersion: 2

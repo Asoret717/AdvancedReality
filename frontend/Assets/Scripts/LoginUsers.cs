@@ -47,8 +47,10 @@ public class LoginUsers : MonoBehaviour
     public static string access_token = "";
     public static string username = "";
     public static Boolean Dark = false;
-    public static OverUserModel getUser(){ return contentUser; }
-    public static void setUser(OverUserModel user){ contentUser = user; }
+
+    public static string DbData = "f";
+    public static OverUserModel getUser() { return contentUser; }
+    public static void setUser(OverUserModel user) { contentUser = user; }
     public static string getUsername() { return username; }
     public static void setUsername(string usern) { username = usern; }
     public static Boolean getDark() { return Dark; }
@@ -60,17 +62,26 @@ public class LoginUsers : MonoBehaviour
     form_register, register_error, contact_window, contact2_window, contact_success, password_window, password_error, user_settings, info,
     email_window, email_error, delete_window, main_menu_white, main_menu_black, ip_input;
 
+    public static LoginUsers instance;
+    void Awake()
+    {
+        instance = this;
+    }
     void Start()
     {
         closeWindows();
-        contentUser=LoginUsers2.getUser();
-        if(contentUser==null){
-            contentUser=Crud.getUser();
+        contentUser = LoginUsers2.getUser();
+        if (contentUser == null)
+        {
+            contentUser = Crud.getUser();
         }
-        if(contentUser != null){
+        if (contentUser != null)
+        {
             access_token = contentUser.access_token;
             Dark = contentUser.user.darkmode;
-        }else{
+        }
+        else
+        {
             access_token = "";
         }
         isLoggedin();
@@ -95,13 +106,15 @@ public class LoginUsers : MonoBehaviour
         delete_window.SetActive(false);
     }
 
-    public static String ip="localhost";
-    public void changeIp(){
-        ip= ip_input.GetComponent<TMP_InputField>().text;
+    public static String ip = "localhost";
+    public void changeIp()
+    {
+        ip = ip_input.GetComponent<TMP_InputField>().text;
         Debug.Log(ip);
     }
 
-    public static String getIp(){
+    public static String getIp()
+    {
         return ip;
     }
 
@@ -270,11 +283,6 @@ public class LoginUsers : MonoBehaviour
     }
     public void login()
     {
-        StartCoroutine(loginI());
-    }
-
-    IEnumerator loginI()
-    {
         if (form_login.transform.GetChild(1).GetComponent<InputField>().text == "")
         {
             login_error.SetActive(true);
@@ -287,22 +295,14 @@ public class LoginUsers : MonoBehaviour
         }
         else
         {
-            var user = new UserModel();
-            user.username = form_login.transform.GetChild(1).GetComponent<InputField>().text;
-            user.password = form_login.transform.GetChild(2).GetComponent<InputField>().text;
-            var byteArray = System.Text.Encoding.UTF8.GetBytes($"{user.username}:{user.password}");
-            string encodedText = Convert.ToBase64String(byteArray);
-            //using var client = new HttpClient();
-            UnityWebRequest request = new UnityWebRequest("http://localhost:4000/api/users/signin", "POST");
-            request.downloadHandler = new DownloadHandlerBuffer();
-            request.SetRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-            request.SetRequestHeader("Authorization", "Basic " + encodedText);
-            yield return request.SendWebRequest();
+            var username = form_login.transform.GetChild(1).GetComponent<InputField>().text;
+            var password = form_login.transform.GetChild(2).GetComponent<InputField>().text;
+            StartCoroutine(loginI(username, password));
 
-            if (request.downloadHandler.text.StartsWith("{\"user\":{\"id\""))
+            if (DbData.StartsWith("{\"user\":{\"id\""))
             {
                 login_error.SetActive(false);
-                contentUser = JsonConvert.DeserializeObject<OverUserModel>(request.downloadHandler.text);
+                contentUser = JsonConvert.DeserializeObject<OverUserModel>(DbData);
                 //Debug.Log(contentUser.access_token);
                 contentUser.user.password = form_login.transform.GetChild(2).GetComponent<InputField>().text;
                 form_login.transform.GetChild(1).GetComponent<InputField>().text = "";
@@ -318,6 +318,17 @@ public class LoginUsers : MonoBehaviour
                 login_error.transform.GetChild(0).GetComponent<Image>().transform.GetChild(0).GetComponent<Text>().text = "Wrong username or password";
             }
         }
+    }
+    public static IEnumerator loginI(string username, string password)
+    {
+        var byteArray = System.Text.Encoding.UTF8.GetBytes($"{username}:{password}");
+        string encodedText = Convert.ToBase64String(byteArray);
+        UnityWebRequest request = new UnityWebRequest("http://localhost:4000/api/users/signin", "POST");
+        request.downloadHandler = new DownloadHandlerBuffer();
+        request.SetRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+        request.SetRequestHeader("Authorization", "Basic " + encodedText);
+        yield return request.SendWebRequest();
+        DbData = request.downloadHandler.text;
     }
 
     public void isLoggedin()
@@ -403,13 +414,11 @@ public class LoginUsers : MonoBehaviour
             request.downloadHandler = new DownloadHandlerBuffer();
             request.SetRequestHeader("Content-Type", "application/x-www-form-urlencoded");
             yield return request.SendWebRequest();
-            //Debug.Log(request.downloadHandler.text);
 
             if (request.downloadHandler.text.StartsWith("{\"user\":{\"id\""))
             {
                 register_error.SetActive(false);
                 contentUser = JsonConvert.DeserializeObject<OverUserModel>(request.downloadHandler.text);
-                //Debug.Log(contentUser.access_token);
                 form_register.transform.GetChild(1).GetComponent<InputField>().text = "";
                 form_register.transform.GetChild(2).GetComponent<InputField>().text = "";
                 form_register.SetActive(false);
@@ -556,9 +565,9 @@ public class LoginUsers : MonoBehaviour
             }
         }
     }
-    
+
     void Update()
     {
-        
+
     }
 }
