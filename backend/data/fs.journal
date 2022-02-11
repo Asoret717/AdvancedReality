@@ -1,0 +1,3 @@
+
+{"operation":"insert","timestamp":{"$$date":1644606225074},"version":358,"doc":{"cpu":27,"freemem":8044,"timestamp":{"$$date":1644606225066},"hostname":"DESKTOP-3T6TSJI","creationDate":{"$$date":1644606225069},"modificationDate":{"$$date":1644606225069},"shortid":"pu9qFPA","_id":"UEWYNQ7VjJeJYWrS","$entitySet":"monitoring","$$etag":1644606225074}}
+{"operation":"insert","timestamp":{"$$date":1644606285077},"version":359,"doc":{"cpu":34,"freemem":7799,"timestamp":{"$$date":1644606285072},"hostname":"DESKTOP-3T6TSJI","creationDate":{"$$date":1644606285073},"modificationDate":{"$$date":1644606285073},"shortid":"Goz4gdW","_id":"fRRiW2pEbG1H9gIH","$entitySet":"monitoring","$$etag":1644606285077}}

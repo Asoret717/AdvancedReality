@@ -1,0 +1,57 @@
+
+// Método post para añadir algo a la base de datos //
+
+var data = {"name":"3dVista", "fileName":"3dVista", "place":"Not unity"};
+var dato = JSON.stringify({"name":"3dVista", "fileName":"3dVista", "place":"Not unity"});
+var request = new XMLHttpRequest();
+request.open("POST", "http://localhost:4000/api/images", true);
+request.setRequestHeader('Content-Type', 'application/json');
+alert(dato);
+request.send(dato);
+
+// Método get para mostrar los datos de un objeto de la base de datos //
+
+var request = new XMLHttpRequest();
+//request.open('GET', 'http://localhost:4000/api/images'+'/34', true);
+request.open('GET', 'http://localhost:4000/api/images', true);
+
+request.onload = function() {
+    var resp = this.response;
+    alert(resp);
+
+    //var image = JSON.parse(resp);
+    //alert(image.id + " " + image.name + " " + image.fileName + " " + image.place);
+};
+
+request.send();
+
+// Método put para editar los datos de un objeto de la base de datos //
+
+var data = '{"name":"Modified", "fileName":"3dVista mod", "place":"Not unity"}';
+
+var request = new XMLHttpRequest();
+request.open("PUT", 'http://localhost:4000/api/images'+'/34');
+
+request.setRequestHeader("Content-Type", "application/json");
+
+request.onreadystatechange = function () {
+   if (request.readyState === 4) {
+      console.log(request.status);
+      console.log(request.responseText);
+      alert(request.responseText);
+   }};
+
+request.send(data);
+
+// Método delete para borrar un dato de la base de datos //
+
+var request = new XMLHttpRequest();
+
+request.open("DELETE", 'http://localhost:4000/api/images'+'/34', true);
+request.onload = function () {
+   alert(request.responseText);
+};
+
+request.send();
+
+
